@@ -69,6 +69,7 @@ public class MainScreen {
                     action = "n";
                     conti = false;
                     s.showList(list);
+                    s.showAverageGrade(list);
                     //System.exit(0);
                 } else if (action.equalsIgnoreCase("y")) {
                     conti = false;

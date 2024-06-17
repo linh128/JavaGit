@@ -31,6 +31,17 @@ public class Student {
             System.out.println("--> Hoc sinh " + s.fullName + " hoc luc " + showHocLuc(s.finalGrade));
         }
     }
+    
+    public void showAverageGrade(ArrayList<Student> list){
+        float sum = 0;
+        float average = 0;
+        for (int i = 0; i < list.size(); i++) {
+            Student s = list.get(i);
+            sum = sum + s.finalGrade;            
+        }
+        average = sum / list.size();
+        System.out.println("Diem trung binh cua ca danh sach la: " + average);
+    }
 
     public String showHocLuc(float grade) {
         if (grade < 4) {
