@@ -16,12 +16,13 @@ public class NhanVien extends Person{
 
     @Override
     public void hienThiThongTin() {
-        System.out.println("Thong tin nhan vien: \n");
+        System.out.println("\n ==============  Thong tin nhan vien:  ==============");
         super.hienThiThongTin();
     }
 
     @Override
     public void nhapThongTin(Scanner sc) {
+        System.out.println("\n ==  Nhap thong tin nhan vien:  ==");
         super.nhapThongTin(sc);
         System.out.println("Nhap phong ban: ");
         this.phongBan = String.valueOf(sc.nextLine());

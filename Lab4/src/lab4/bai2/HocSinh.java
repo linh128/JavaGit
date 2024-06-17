@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Administrator
  */
-public class HocSinh extends Person{
+public class HocSinh extends Person {
 
     public String thoiKhoaBieuLichHoc;
     public String giaoVienChuNhiem;
@@ -30,9 +30,18 @@ public class HocSinh extends Person{
 
     @Override
     public void nhapThongTin(Scanner sc) {
+        System.out.println("\n ==  Nhap thong tin hoc sinh:  ==");
         super.nhapThongTin(sc); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-        System.out.println("Nhap lop dang theo hoc: ");
-        this.lopDangTheoHoc = Integer.parseInt(sc.nextLine());
+        boolean x = false;
+        while (x == false) {
+            System.out.println("Nhap lop dang theo hoc: ");
+            try {
+                this.lopDangTheoHoc = Integer.parseInt(sc.nextLine());
+                x = true;
+            } catch (Exception e) {
+                System.out.println("Lop dang hoc khong hop le! Vui long nhap lai!");
+            }
+        }
         System.out.println("Nhap giao vien chu nhiem: ");
         this.giaoVienChuNhiem = String.valueOf(sc.nextLine());
         System.out.println("Nhap thoi khoa bieu lich hoc: ");
@@ -41,14 +50,12 @@ public class HocSinh extends Person{
 
     @Override
     public void hienThiThongTin() {
-        System.out.println("Thong tin hoc sinh: \n");
+        System.out.println("\n ==============  Thong tin hoc sinh:  ==============");
         super.hienThiThongTin();
-        System.out.println("Lop dang theo hoc: "+lopDangTheoHoc);
-        System.out.println("Giao vien chu nhiem: "+giaoVienChuNhiem);
-        System.out.println("Thoi khoa bieu lich hoc: "+thoiKhoaBieuLichHoc);
+        System.out.println("Lop dang theo hoc: " + lopDangTheoHoc);
+        System.out.println("Giao vien chu nhiem: " + giaoVienChuNhiem);
+        System.out.println("Thoi khoa bieu lich hoc: " + thoiKhoaBieuLichHoc);
     }
-
-    
 
     public HocSinh(String thoiKhoaBieuLichHoc, String giaoVienChuNhiem, int lopDangTheoHoc, String name, String gender, String queQuan, int birthday) {
         super(name, gender, queQuan, birthday);

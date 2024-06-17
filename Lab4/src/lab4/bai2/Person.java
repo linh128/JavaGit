@@ -29,10 +29,9 @@ public class Person {
             try {
                 System.out.println("Nhap nam sinh: ");
                 this.birthday = Integer.parseInt(sc.nextLine());
-                System.out.println("\n");
                 flag = true;
             } catch (Exception e) {
-                System.out.println("Nam sinh khong hop le!!! Vui long nhap lai!\n");
+                System.out.println("Nam sinh khong hop le! Vui long nhap lai!");
                 
             }
         }
@@ -40,13 +39,9 @@ public class Person {
     
     public void hienThiThongTin(){
         System.out.println("Ho ten: " + name);
-        System.out.println("\n");
         System.out.println("Gioi tinh: " + gender);
-        System.out.println("\n");
         System.out.println("Que quan: " + queQuan);
-        System.out.println("\n");
         System.out.println("Nam sinh: " + birthday);
-        System.out.println("\n");
     }
 
     public Person(String name, String gender, String queQuan, int birthday) {

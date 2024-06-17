@@ -18,14 +18,29 @@ public class GiaoVien extends Person {
 
     @Override
     public void hienThiThongTin() {
-        System.out.println("Thong tin: \n");
+        System.out.println("\n ==============  Thong tin giao vien:  ==============");
         super.hienThiThongTin(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
         System.out.println("Lop dang chu nhiem: " + lopDangChuNhiem + "\n" + "Tem bo mon: " + tenBoMon + "\n" + "Thoi khoa bieu lich day: " + thoiKhoaBieuLichDay);
     }
 
     @Override
     public void nhapThongTin(Scanner sc) {
+        System.out.println("\n ==  Nhap thong tin giao vien:  ==");
         super.nhapThongTin(sc); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        boolean f = false;
+        while (f == false) {
+            System.out.println("Nhap vao lop dang chu nhiem: ");
+            try {
+                this.lopDangChuNhiem = Integer.parseInt(sc.nextLine());
+                f = true;
+            } catch (Exception e) {
+                System.out.println("Lop dang chu nhiem khong hop le! Vui long nhap lai!");
+            }
+        }
+        System.out.println("Nhap vao ten bo mon: ");
+        this.tenBoMon = String.valueOf(sc.nextLine());
+        System.out.println("Nhap vao thoi khoa bieu lich day: ");
+        this.thoiKhoaBieuLichDay = String.valueOf(sc.nextLine());
     }
 
     public GiaoVien(int lopDangChuNhiem, String tenBoMon, String thoiKhoaBieuLichDay, String name, String gender, String queQuan, int birthday) {
