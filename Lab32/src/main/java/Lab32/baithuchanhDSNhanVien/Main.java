@@ -68,9 +68,11 @@ public class Main {
             while (slr == false) {
                 try {
                     a.salary = Double.parseDouble(sc.nextLine());
-                    slr = true;
+
                     if (a.salary <= 0) {
                         System.out.println("So luong phai >0! Vui long nhap lai!");
+                    } else {
+                        slr = true;
                     }
                 } catch (Exception e) {
                     System.out.println("So nhap vao khong hop le! Vui long nhap lai!");
@@ -80,7 +82,6 @@ public class Main {
         }
 
         //Show
-        
         NhanVien x = new NhanVien();
         x.writeToExcel(l);
 

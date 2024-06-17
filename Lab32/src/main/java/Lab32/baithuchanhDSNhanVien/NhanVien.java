@@ -68,7 +68,7 @@ public class NhanVien {
             FileOutputStream out = new FileOutputStream(new File(path));
             z.write(out);
             out.close();
-            System.out.println("User Detail da duoc luu xuong theo duong dan: '" + path + "'");
+            System.out.println("File DSNhanVien da duoc luu xuong theo duong dan: '" + path + "'");
         } catch (Exception e) {
             System.out.println("LAB3.2 Some Thing Wrong! \n" + "StringMSG: " + e.toString());
         }
