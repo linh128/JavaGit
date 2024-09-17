@@ -54,16 +54,16 @@ public class TheHeaviestAnimal {
         } while (count <= 5);
         
         int max_index = 0;
+        float max = 0;
         for (int i = 0; i < list.size(); i++) {
-            float max = 0;            
             TheHeaviestAnimal x = (TheHeaviestAnimal) list.get(i);
             if (max < x.getWeight()) {
                 max = x.getWeight();
                 max_index = i;
             }
         }
-        TheHeaviestAnimal max = (TheHeaviestAnimal) list.get(max_index);
-        System.out.println("The Heaviest Animal: " + max.getName() + " weight " +max.getWeight());
+        TheHeaviestAnimal maxi = (TheHeaviestAnimal) list.get(max_index);
+        System.out.println("The Heaviest Animal: " + maxi.getName() + " weight " +maxi.getWeight());
 
     }
 }
